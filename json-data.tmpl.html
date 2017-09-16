@@ -1,0 +1,16 @@
+<input type="text" class="form-control" placeholder="Search Here..." ng-model="jsonDataVm.searchText">
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th ng-click="jsonDataVm.sorter.sortBy='amount'; jsonDataVm.sorter.sortOrder = !jsonDataVm.sorter.sortOrder;">Name</th>
+        <th ng-click="jsonDataVm.sorter.sortBy='amount'; jsonDataVm.sorter.sortOrder = !jsonDataVm.sorter.sortOrder;">Category</th>
+        <th ng-click="jsonDataVm.sorter.sortBy='amount'; jsonDataVm.sorter.sortOrder = !jsonDataVm.sorter.sortOrder;">Amount</th>
+    </tr>
+    <tbody>
+    <tr ng-repeat="user in jsonDataVm.users | filter:jsonDataVm.searchText | orderBy:jsonDataVm.sorter.sortBy: jsonDataVm.sorter.sortOrder ">
+        <td>{{user.name}}</td>
+        <td>{{user.category}}</td>
+        <td>{{user.amount}}</td>
+    </tr>
+    </tbody>
+</table>

@@ -1,0 +1,18 @@
+<input type="text" class="form-control" placeholder="Search Here..." ng-model="catDataVm.searchText">
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th ng-click="catDataVm.sorter.sortBy='amount'; catDataVm.sorter.sortOrder = !catDataVm.sorter.sortOrder;">Name</th>
+        <th ng-click="catDataVm.sorter.sortBy='amount'; catDataVm.sorter.sortOrder = !catDataVm.sorter.sortOrder;">C1</th>
+        <th ng-click="catDataVm.sorter.sortBy='amount'; catDataVm.sorter.sortOrder = !catDataVm.sorter.sortOrder;">C2</th>
+        <th ng-click="catDataVm.sorter.sortBy='amount'; catDataVm.sorter.sortOrder = !catDataVm.sorter.sortOrder;">C3</th>
+    </tr>
+    <tbody>
+    <tr ng-repeat="user in catDataVm.final | filter:catDataVm.searchText | orderBy: catDataVm.sorter.sortBy: catDataVm.sorter.sortOrder ">
+        <td>{{user.name}}</td>
+        <td>{{user.C1}}</td>
+        <td>{{user.C2}}</td>
+        <td>{{user.C3}}</td>
+    </tr>
+    </tbody>
+</table>

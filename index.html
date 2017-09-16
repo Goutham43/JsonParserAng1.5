@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="xfinity">
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="container">
+    <h1>User App</h1>
+    <nav>
+        <ul class="nav nav-pills">
+            <li class="active"><a href='#/json-data'>Json-Data</a></li>
+            <li><a href='#/cat-data'>Cat-Data</a></li>
+        </ul>
+    </nav>
+</header>
+<section class="container" ng-view>
+
+</section>
+<footer class="container">
+    &copy; 2017 | Xfinity
+</footer>
+
+<script src="https://code.angularjs.org/1.5.8/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.5.8/angular-messages.min.js"></script>
+<script src="https://code.angularjs.org/1.5.8/angular-route.min.js"></script>
+<script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+<script src="xfinity.module.js"></script>
+<script src="json-data.controller.js"></script>
+<script src="category.controller.js"></script>
+<script src="json.service.js"></script>
+
+</body>
+
+</html>
